@@ -31,7 +31,7 @@ Benchmark.bm do |benchmark|
     two_sum(big_nums, 19999)
   end
 
-  benchmark.report("with hash and lookup") do
+  benchmark.report("Best Solution") do
     def two_sum(nums, target)
       lookup = {}
       nums.each_with_index do |num, index|
