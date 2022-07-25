@@ -6,26 +6,21 @@ def solution(sequence):
 	return check
 
 def apply_check(asequence, removed):
-	print(asequence)
-	print(removed)
-	flag = True
 	for i in range(len(asequence) - 1):
-		print(asequence[i])
-		if (asequence[i] > asequence[i + 1]) and not removed:
-			print('inside recursion')
+		if (asequence[i] >= asequence[i + 1]) and not removed:
 			sublist = list(asequence)
-			sublist.pop(i)
-			print('sublist', sublist)
+			if i > 0 and asequence[i-1] >= asequence[i + 1]:
+				sublist.pop(i+1)
+			else:
+				sublist.pop(i)
 			removed = True
-			apply_check(sublist, removed)
-		elif (asequence[i] > asequence[i + 1]) and removed:
-			print('Inside output')
-			flag = False
-			break
+			return apply_check(sublist, removed)
+		elif (asequence[i] >= asequence[i + 1]) and removed:
+			return False
 
 	return True
 
 print('Calling method')
-output = solution([1,3,2,5,4,10])
+print(solution([1, 2, 3, 4, 3, 6]))
+print(solution([10, 1, 2, 3, 4, 5]))
 
-print('Output: ', output)
