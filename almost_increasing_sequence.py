@@ -23,4 +23,4 @@ def apply_check(asequence, removed):
 print('Calling method')
 print(solution([1, 2, 3, 4, 3, 6]))
 print(solution([10, 1, 2, 3, 4, 5]))
-
+print(solution([1, 2, 1, 2]))
