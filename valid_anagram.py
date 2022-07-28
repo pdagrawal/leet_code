@@ -1,2 +1,5 @@
 def valid_anagram(s: str, t: str) -> bool:
-    pass
+    return sorted(s) == sorted(t)
+
+print(valid_anagram('anagram', 'nagaram'))
+print(valid_anagram('rat', 'car'))
