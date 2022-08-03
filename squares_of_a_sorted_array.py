@@ -1,4 +1,4 @@
-def squares_of_a_sorted_array(nums: List[int]) -> List[int]:
+def squares_of_a_sorted_array(nums):
     squared = []
     for num in nums:
         squared.append(num*num)

@@ -1,4 +1,4 @@
-def max_consecutive_ones(nums: List[int]) -> int:
+def max_consecutive_ones(nums) -> int:
     max_count = 0
     current = 0
     start = True

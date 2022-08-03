@@ -1,4 +1,4 @@
-def find_numbers_with_even_number_of_digits(nums: List[int]) -> int:
+def find_numbers_with_even_number_of_digits(nums) -> int:
     even_count = 0
     for num in nums:
         if len(str(num)) % 2 == 0:
