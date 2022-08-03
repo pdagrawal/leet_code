@@ -2,12 +2,19 @@ class MyCalendar:
     def __init__(self):
         self.bookings = []
 
-    def book(self, start: int, end: int) -> bool:
-        bookings = self.bookings
-        for booking in bookings:
-            if range(max(booking[0], start), min(booking[1], end)):
+    # def book(self, start: int, end: int) -> bool:
+    #     bookings = self.bookings
+    #     for booking in bookings:
+    #         if range(max(booking[0], start), min(booking[1], end)):
+    #             return False
+    #     self.bookings.append([start, end])
+    #     return True
+
+    def book(self, start, end):
+        for s, e in self.bookings:
+            if s < end and start < e:
                 return False
-        self.bookings.append([start, end])
+        self.bookings.append((start, end))
         return True
 
 # Your MyCalendar object will be instantiated and called as such:
