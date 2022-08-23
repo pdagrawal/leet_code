@@ -8,7 +8,7 @@ class Solution:
         writePointer = 0
         for i in range(len(nums)):
             if nums[i] != 0:
-                nums[writePointer] = nums[i]
                 if writePointer != i:
+                    nums[writePointer] = nums[i]
                     nums[i] = 0
                 writePointer += 1
